@@ -59,7 +59,7 @@ source ~/.bashrc
 
 ```
 git clone https://github.com/divergentti/steganography.git
-cd steganography
+cd steganography/src
 
 go mod init yourmodule
 go mod tidy
