@@ -1,11 +1,8 @@
 # Steganography Tool
 
-This is a cross-platform (Windows and Linux) GUI steganography tool that supports hybrid embedding techniques, combining **adaptive LSB** and **DCT-based** methods to hide secret messages within images. Optional **AES encryption** is also supported to secure the hidden message. The tool preserves image quality and **EXIF metadata**, allowing the output image to retain key info from the original.
+This is a GUI steganography tool that supports hybrid embedding techniques, combining **adaptive LSB** and **DCT-based** methods to hide secret messages within images. Optional **AES encryption** is also supported to secure the hidden message. The tool preserves image quality and **EXIF metadata**, allowing the output image to retain key info from the original.
 
 **Supported formats:** `.jpg`, `.jpeg`, `.png`, `.bmp`, `.webp`
-
-📺 **Video demo:** [https://www.youtube.com/@Controvergent](https://www.youtube.com/@Controvergent)  
-🖼️ **Samples:** Found in the `samples/` folder — password is `qwerty`.
 
 ---
 
@@ -39,51 +36,35 @@ While **C2PA** provides robust AI image attribution, I wanted to explore the bro
 
 ### 🖥️ GUI Interface
 
-- Built using **PyQt6**
+- Built using **Fyne**
 - Simple interface for file selection, encryption/decryption, and message entry
 
-### 💻 Cross-Platform
-
-- Tested and packaged for both **Windows** and **Linux**
-- Built using **Nuitka**
-  - Linux binary: `bin/` directory (run with `chmod +x`)
-  - Windows EXE: `exe/` directory
-
-**Note! Download RAW to get binary file!**
 ---
 
 ## Requirements (for source version)
 
-Install Python dependencies (Python 3.8+):
+Go version 1.20+
 
-\`\`\`bash
-pip install -r requirements.txt
-\`\`\`
-
-Main dependencies:
-
-- Python ≥ 3.8
-- PyQt6
-- Pillow
-- OpenCV-Python
-- NumPy
-- SciPy
-- PyCryptodome
+```
+wget https://golang.org/dl/go1.24.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.24.2.linux-amd64.tar.gz
+export PATH=/usr/local/go1.24.2/go/bin:$PATH
+echo "alias go='/usr/local/go1.23.0/go/bin/go'" >> ~/.bashrc
+source ~/.bashrc
+```
 
 ---
 
 ## Installation (from source)
 
-\`\`\`bash
+```
 git clone https://github.com/divergentti/steganography.git
 cd steganography
 
-# Optional virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-pip install -r requirements.txt
-\`\`\`
+go mod init yourmodule
+go mod tidy
+go build -o stegago.go
+```
 
 The code is modular and split into:
 - GUI layer
@@ -97,9 +78,7 @@ Comments and optional debug flags are included.
 
 Run the main application:
 
-\`\`\`bash
-python Stegatool-v0-1-0.py
-\`\`\`
+`./stegago.go`
 
 ### Encryption Mode
 
@@ -118,39 +97,6 @@ python Stegatool-v0-1-0.py
 
 ---
 
-## Future Work
-
-- Add CLI support to `endecrypter.py`
-- Expand image format support
-- Add a **Settings** page:
-  - Custom DCT coefficient positions
-  - Batch size
-  - Embedding parameters
-
----
-
-## Contributing
-
-Contributions welcome!  
-Please fork the repo and submit a pull request.
-
-➡️ Before larger changes, open an issue to discuss your idea.
-
----
-
 ## License
 
 This project is licensed under the **MIT License**.
-
----
-
-## Acknowledgments
-
-- **Santeri Kallio** – for the initial spark and discussion on LinkedIn
-- Open-source libraries:
-  - PyQt6
-  - Pillow
-  - OpenCV
-  - NumPy
-  - SciPy
-  - PyCryptodome
