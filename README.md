@@ -53,7 +53,7 @@ Installing from tar package:
 wget https://golang.org/dl/go1.24.2.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.24.2.linux-amd64.tar.gz
 export PATH=/usr/local/go1.24.2/go/bin:$PATH
-echo "alias go='/usr/local/go1.23.0/go/bin/go'" >> ~/.bashrc
+echo "alias go='/usr/local/go1.24.2/go/bin/go'" >> ~/.bashrc
 source ~/.bashrc
 ```
 
