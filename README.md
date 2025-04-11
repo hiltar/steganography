@@ -70,8 +70,6 @@ The code is modular and split into:
 - GUI layer
 - Encryption/decryption engine
 
-Comments and optional debug flags are included.
-
 ---
 
 ## Usage
