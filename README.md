@@ -45,6 +45,10 @@ While **C2PA** provides robust AI image attribution, I wanted to explore the bro
 
 Go version 1.20+
 
+If package manager has 1.20+ version, it can be installed:
+`sudo apt install go -y`
+
+Installing from tar package:
 ```
 wget https://golang.org/dl/go1.24.2.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.24.2.linux-amd64.tar.gz
