@@ -61,7 +61,7 @@ source ~/.bashrc
 git clone https://github.com/divergentti/steganography.git
 cd steganography/src
 
-go mod init yourmodule
+go mod init stegago
 go mod tidy
 go build -o stegago.go
 ```
